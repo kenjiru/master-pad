@@ -40,9 +40,9 @@ public class Main {
 	}
 	
 	public static void usage() {
-		System.out.println("Usage: ");
-		System.out.println("\t java app1 -client <serverHostname> <serverPort> <message>");
-		System.out.println("\t java app1 -server <serverPort>");
+		System.out.println("Utilizare: ");
+		System.out.println("\t java app1.Main -client <serverHostname> <serverPort> <message>");
+		System.out.println("\t java app1.Main -server <serverPort>");
 	}
 
 }

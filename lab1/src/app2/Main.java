@@ -43,8 +43,11 @@ public class Main {
 	}
 	
 	public static void usage() {
-		System.out.println("Usage: ");
-		System.out.println("\t java app2 -client <serverHostname> <serverPort> <fileName>");
-		System.out.println("\t java app2 -server <serverPort>");
+		System.out.println("Utilizare: ");
+		System.out.println("\t java app2.Main -client <serverHostname> <serverPort> <fileName>");
+		System.out.println("\t java app2.Main -server <serverPort>");
+		System.out.println("\t Serverul salveaza fisierele primite in directorul 'server\' din calea curenta!");
+		System.out.println("\t Acest director trebuie creat in prealabil.");
+
 	}
 }

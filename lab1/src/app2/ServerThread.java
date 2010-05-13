@@ -22,7 +22,7 @@ public class ServerThread extends Thread {
 			System.out.println("FileName: " + line);
 			
 			// creez fisierul
-			out = new BufferedWriter(new FileWriter(new File(line)));
+			out = new BufferedWriter(new FileWriter(new File("server/" + line)));
 			
 			// scriu in fisier
 			while ((line = in.readLine()) != null) {
