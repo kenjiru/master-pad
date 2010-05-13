@@ -1,13 +1,50 @@
 package app2;
 
+import java.io.*;
+
+import app2.Client;
+import app2.Server;
+
 public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		if (args.length == 0) {
+			Main.usage();
+			return;
+		}
+		
+		if (args[0].equals("-client")) {
+			if (args.length != 4) {
+				Main.usage();
+				return;
+			}
+			
+			Client c = new Client (args[1], args[2], args[3]);
+			try {
+				c.run();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		if (args[0].equals("-server")) {
+			if (args.length != 2) {
+				Main.usage();
+				return;
+			}
+			
+			Server s = new Server (args[1]);
+			try {
+				s.run();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
-
+	
+	public static void usage() {
+		System.out.println("Usage: ");
+		System.out.println("\t java app2 -client <serverHostname> <serverPort> <fileName>");
+		System.out.println("\t java app2 -server <serverPort>");
+	}
 }

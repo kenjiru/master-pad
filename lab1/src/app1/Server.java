@@ -5,18 +5,21 @@ import java.net.*;
 
 public class Server {
 	private DatagramSocket socket = null;
+	private int port;
 
 	public Server(String port) {
+		this.port = Integer.parseInt(port);
+	}
+
+	public void run() throws IOException {
 		try {
-			socket = new DatagramSocket(Integer.parseInt(port));
+			socket = new DatagramSocket(port);
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		} catch (SocketException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public void run() throws IOException {
+		
 		while (true) {
 			byte[] buf = new byte[256];
 
