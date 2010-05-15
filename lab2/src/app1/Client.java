@@ -79,7 +79,7 @@ public class Client
 				BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 				String line = reader.readLine();
 				
-				Pattern p = Pattern.compile("(\\d*)\\s*([+,-,*,/])\\s*(\\d*)\\s*[=]*\\s*");
+				Pattern p = Pattern.compile("(\\d*)\\s*([+,\\-,*,/])\\s*(\\d*)\\s*[=]*\\s*");
 				Matcher m = p.matcher(line);
 				
 				if (m.matches() == false) {

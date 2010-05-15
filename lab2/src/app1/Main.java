@@ -39,8 +39,8 @@ public class Main {
 	
 	public static void usage() {
 		System.out.println("Utilizare: ");
-		System.out.println("\t java app2.Main -client <serverHostname> <serverPort> <interfata>");
-		System.out.println("\t java app2.Main -server <serverPort>");
+		System.out.println("\t java app1.Main -client <serverHostname> <serverPort> <interfata>");
+		System.out.println("\t java app1.Main -server <serverPort>");
 
 	}
 }
