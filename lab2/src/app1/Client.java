@@ -26,16 +26,14 @@ public class Client
         Registry registry;
 		try {
 			registry = LocateRegistry.getRegistry(hostName, port);
+			
+			interfata = (Interfata) registry.lookup(numeInterfata);
 		} catch (RemoteException e) {
 			e.printStackTrace();
-			return;
-		}
-
-		try {
-			interfata = (Interfata) registry.lookup(numeInterfata);
+			System.exit(0);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return;
+			System.exit(0);
 		}
 	}
 	
@@ -63,6 +61,7 @@ public class Client
 			}
 		} catch (RemoteException e) {
 			e.printStackTrace();
+			System.exit(0);
 		}
 		
 		System.out.println("Rezultat: " + Long.toString(z));
@@ -90,11 +89,8 @@ public class Client
 				
 			} catch (IOException e) {
 				e.printStackTrace();
+				System.exit(0);
 			}
 		}
 	}
-	
-	public static void main(String args[]) {
-        new Client("localhost", "5000", "Interfata").run();
-    }
 }

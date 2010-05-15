@@ -41,6 +41,7 @@ public class Server implements Interfata {
             System.out.println("Obiectul server a fost inregistrat!");
         } catch (Exception e) {
             e.printStackTrace();
+            System.exit(0);
         }
     }
 }
