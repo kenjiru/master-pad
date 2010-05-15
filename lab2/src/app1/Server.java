@@ -1,12 +1,18 @@
-package server;
-import interfata.Interfata;
+package app1;
 
 import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
+
 public class Server implements Interfata {
+	private int port;
+	private String interfata = "Interfata";
+	
+	public Server(String port) {
+		this.port = Integer.parseInt(port);
+	}
 
 	public long aduna(long a, long b) throws RemoteException {
         return a + b;
@@ -24,21 +30,13 @@ public class Server implements Interfata {
         return a / b;
     }
 
-    public static void main(String[] args) 
+    public void run() 
     {
-    	if (System.getSecurityManager() == null) {
-        	RMISecurityManager rmiSM = new RMISecurityManager();
-        	System.setSecurityManager(rmiSM);
-        }
-    	
         try {
-            Interfata interfata = new Server();
-            Interfata stub = (Interfata) UnicastRemoteObject.exportObject(interfata, 0);
+            Interfata stub = (Interfata) UnicastRemoteObject.exportObject(this, 0);
        
-            String nume = "Interfata";
-            int port = 5000;
             Registry registry = LocateRegistry.createRegistry(port);
-            registry.rebind(nume, stub);
+            registry.rebind(interfata, stub);
             
             System.out.println("Obiectul server a fost inregistrat!");
         } catch (Exception e) {

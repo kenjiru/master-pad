@@ -1,6 +1,5 @@
-package client;
+package app1;
 
-import interfata.Interfata;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,12 +23,6 @@ public class Client
 	}
 	
 	private void init() {
-		if (System.getSecurityManager() == null) 
-        {
-        	RMISecurityManager rmiSM = new RMISecurityManager();
-        	System.setSecurityManager(rmiSM);
-        }
-        
         Registry registry;
 		try {
 			registry = LocateRegistry.getRegistry(hostName, port);
