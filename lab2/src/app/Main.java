@@ -1,4 +1,4 @@
-package app1;
+package app;
 
 import java.io.IOException;
 import java.rmi.RMISecurityManager;
