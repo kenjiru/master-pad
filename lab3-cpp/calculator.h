@@ -39,6 +39,22 @@ JNIEXPORT jlong JNICALL Java_app_Calculator_inmulteste
 JNIEXPORT jlong JNICALL Java_app_Calculator_imparte
   (JNIEnv *, jobject, jlong, jlong);
 
+/*
+ * Class:     app_Calculator
+ * Method:    baza2
+ * Signature: (I)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_app_Calculator_baza2
+  (JNIEnv *, jobject, jint);
+
+/*
+ * Class:     app_Calculator
+ * Method:    baza10
+ * Signature: (Ljava/lang/String;)I
+ */
+JNIEXPORT jint JNICALL Java_app_Calculator_baza10
+  (JNIEnv *, jobject, jstring);
+
 #ifdef __cplusplus
 }
 #endif
