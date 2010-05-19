@@ -12,4 +12,8 @@ public class Calculator {
     public native long inmulteste(long a, long b);
 
     public native long imparte(long a, long b);
+    
+    public native String baza2(int a);
+    
+    public native int baza10(String s);
 }
