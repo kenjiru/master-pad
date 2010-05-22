@@ -160,7 +160,6 @@ const CORBA_long_long a,
 const CORBA_long_long b,
 CORBA_Environment *ev)
 {
-CORBA_long_long retval;
  /* ------   insert method code here   ------ */
 	return a + b;
  /* ------ ---------- end ------------ ------ */
@@ -175,7 +174,6 @@ const CORBA_long_long a,
 const CORBA_long_long b,
 CORBA_Environment *ev)
 {
-CORBA_long_long retval;
  /* ------   insert method code here   ------ */
 	return a - b;
  /* ------ ---------- end ------------ ------ */
@@ -190,7 +188,6 @@ const CORBA_long_long a,
 const CORBA_long_long b,
 CORBA_Environment *ev)
 {
-CORBA_long_long retval;
  /* ------   insert method code here   ------ */
 	return a * b;
  /* ------ ---------- end ------------ ------ */
@@ -205,7 +202,6 @@ const CORBA_long_long a,
 const CORBA_long_long b,
 CORBA_Environment *ev)
 {
-CORBA_long_long retval;
  /* ------   insert method code here   ------ */
 	return a / b;
  /* ------ ---------- end ------------ ------ */
@@ -219,11 +215,30 @@ impl_calc_Calculator_baza2(impl_POA_calc_Calculator *servant,
 const CORBA_long_long n,
 CORBA_Environment *ev)
 {
-CORBA_string retval;
  /* ------   insert method code here   ------ */
+	CORBA_string str = CORBA_string_alloc(100);
+	char t;
+	int i = 0, j, r;
+	long a = n;
+
+	while (a > 0) {
+		r = a % 2;
+		str[i++] = '0' + r;
+		a = a / 2;
+	}
+	str[i] = 0;
+
+	// inversez sirul
+	j = 0;
+	while (j < i / 2) {
+		t = str[j];
+		str[j] = str[i-j-1];
+		str[i-j-1] = t;
+		j++;
+	}
+	return str;
  /* ------ ---------- end ------------ ------ */
 
-return retval;
 }
 #endif
 
