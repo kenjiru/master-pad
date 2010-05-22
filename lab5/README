@@ -1,0 +1,3 @@
+Inainte de a porni serverul sau clientul, trebuie pornit daemonul ORB:
+
+orbd -ORBInitialPort 1050
