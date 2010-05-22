@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.rmi.*;
 import java.rmi.registry.*;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,10 +43,12 @@ public class Client
 		
 		init();
 		
+		Scanner in = new Scanner(System.in);  
+		
 		System.out.println("Steps: ");
-		steps = System.in.read();
+		steps = in.nextInt();
 		System.out.println("Threads: ");
-		threads = System.in.read();
+		threads = in.nextInt();
 		
 		System.out.println("PI: " + interfata.PI(threads, steps));
 	}
