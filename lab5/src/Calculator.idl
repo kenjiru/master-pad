@@ -1,0 +1,11 @@
+module calc
+{
+	interface Calculator
+	{
+		long long aduna(in long long a, in long long b);
+		long long scade(in long long a, in long long b);
+		long long inmulteste(in long long a, in long long b);
+		long long imparte(in long long a, in long long b);
+		string baza2(in long long n);
+	};
+};
