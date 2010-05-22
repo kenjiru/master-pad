@@ -39,6 +39,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1448324573" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
 								<option id="gnu.c.link.option.libs.713402814" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="ORBit-2"/>
+									<listOptionValue builtIn="false" value="ORBitCosNaming-2"/>
 									<listOptionValue builtIn="false" value="gmodule-2.0"/>
 									<listOptionValue builtIn="false" value="glib-2.0"/>
 									<listOptionValue builtIn="false" value="gobject-2.0"/>
