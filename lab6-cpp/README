@@ -1,0 +1,21 @@
+Am folosit libraria ORBit2 pe Ubuntu 9.10.
+
+Am generat fisierele c/h folosind comanda:
+orbit-idl-2 --skeleton-impl Calculator.idl
+
+In fisierul server.c am inlocuit functia: 
+	etk_raised_exception(ev)
+cu expresia: 
+	(ev)->_major != CORBA_NO_EXCEPTION
+
+Am rulat serverul orb folosind comanda:
+	orbd -ORBInitialPort 1050
+	
+After calling make in terminal window all sources have been compiled and you 
+should open a second terminal window. In the first window we will start the 
+server with the command: calculator-server > calculator.ref. The server should 
+print a very long string into the file calculator.ref, starting with the 4 
+character sequence IOR: In the second window we start the client with the 
+command calculator-client `cat calculator.ref` IOR-string. You should not try 
+to type the IOR string, instead use the cut and paste functionality of your 
+xterm or whatever you are using.
