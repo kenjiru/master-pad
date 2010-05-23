@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="magazin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="clienti">
+					<xs:complexType>
+						<xs:sequence>
+						<xs:element name="client">
+							<xs:complexType>
+								<xs:sequence>
+								<xs:element name="idClient" type="xs:positiveInteger"/>
+								<xs:sequence>
+									<xs:element name="nume" type="xs:string"/>
+									<xs:element name="prenume" type="xs:string"/>
+									<xs:element name="varsta" type="xs:positiveInteger"/>
+								</xs:sequence>
+								<xs:element name="jocuriAccesate" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+										<xs:element name="idJoc" type="xs:positiveInteger"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jocuriCumparate" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+										<xs:element name="idJoc" type="xs:positiveInteger"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="jocuri">
+					<xs:complexType>
+						<xs:sequence>
+						<xs:element name="joc">
+						<xs:complexType>
+							<xs:sequence>
+							<xs:element name="idJoc" type="xs:positiveInteger"/>
+							<xs:element name="nume" type="xs:string"/>
+							<xs:element name="tip" type="xs:string"/>
+							<xs:element name="rating" type="xs:string" minOccurs="0"/>
+							<xs:element name="firme">
+								<xs:complexType>
+									<xs:sequence>
+									<xs:element name="firma" type="xs:string" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="editori">
+								<xs:complexType>
+								<xs:sequence>
+									<xs:element name="editor" type="xs:string" maxOccurs="unbounded"/>
+								</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dataAparitiei" type="xs:date"/>
+							<xs:element name="pret" type="xs:double"/>
+							</xs:sequence>
+						</xs:complexType>
+						</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<magazin>
+	<clienti>
+		<client>
+			<idClient>1</idClient>
+			<nume>Radu</nume>
+			<prenume>George</prenume>
+			<varsta>22</varsta>
+		</client>
+	</clienti>
+	<jocuri>
+		<joc>
+			<idJoc>1</idJoc>
+			<nume>Heroes III</nume>
+			<tip>Strategie</tip>
+			<rating>10</rating>
+			<firme>
+				<firma>EA</firma>
+			</firme>
+			<editori>
+				<editor>Computer Games</editor>
+			</editori>
+			<dataAparitiei>2010-05-10</dataAparitiei>
+			<pret>10</pret>
+		</joc>
+	</jocuri>
+</magazin>
