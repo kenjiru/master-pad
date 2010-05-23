@@ -7,6 +7,12 @@
 			<prenume>George</prenume>
 			<varsta>22</varsta>
 		</client>
+		<client>
+			<idClient>2</idClient>
+			<nume>Ghita</nume>
+			<prenume>Portita</prenume>
+			<varsta>14</varsta>
+		</client>
 	</clienti>
 	<jocuri>
 		<joc>
@@ -19,6 +25,21 @@
 			</firme>
 			<editori>
 				<editor>Computer Games</editor>
+			</editori>
+			<dataAparitiei>2010-05-10</dataAparitiei>
+			<pret>10</pret>
+		</joc>
+		<joc>
+			<idJoc>1</idJoc>
+			<nume>World of Warcraft</nume>
+			<tip>Strategie</tip>
+			<rating>20</rating>
+			<firme>
+				<firma>Bilizzard</firma>
+			</firme>
+			<editori>
+				<editor>Computer Games</editor>
+				<editor>Games Review</editor>
 			</editori>
 			<dataAparitiei>2010-05-10</dataAparitiei>
 			<pret>10</pret>

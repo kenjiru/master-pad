@@ -17,7 +17,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		String xmlFile = "test.xml";
-		String xsdFile = "magazin.xsd";
+		String xsdFile = "magazin-v2.xsd";
 		
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		
@@ -41,8 +41,6 @@ public class Main {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
-		System.out.println("Documentul a fost validat!");
+		}		
 	}
 }

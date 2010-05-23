@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:complexType name="listaJocuriType">
+		<xs:sequence>
+			<xs:element name="idJoc" type="xs:positiveInteger"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="clientType">
+		<xs:sequence>
+			<xs:element name="idClient" type="xs:positiveInteger"/>
+			<xs:element name="nume" type="xs:string"/>
+			<xs:element name="prenume" type="xs:string"/>
+			<xs:element name="varsta" type="xs:positiveInteger"/>
+			<xs:element name="jocuriAccesate" type="listaJocuriType" minOccurs="0" />
+			<xs:element name="jocuriCumparate" type="listaJocuriType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="clientiType">
+		<xs:sequence>
+			<xs:element name="client" type="clientType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="listaFirmeType">
+		<xs:sequence>
+			<xs:element name="firma" type="xs:string" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="listaEditoriType">
+		<xs:sequence>
+			<xs:element name="editor" type="xs:string" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="jocType">
+		<xs:sequence>
+			<xs:element name="idJoc" type="xs:positiveInteger"/>
+			<xs:element name="nume" type="xs:string"/>
+			<xs:element name="tip" type="xs:string"/>
+			<xs:element name="rating" type="xs:string" minOccurs="0"/>
+			<xs:element name="firme" type="listaFirmeType" />
+			<xs:element name="editori" type="listaEditoriType" />
+			<xs:element name="dataAparitiei" type="xs:date"/>
+			<xs:element name="pret" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="jocuriType">
+		<xs:sequence>
+			<xs:element name="joc" type="jocType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="magazin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="clienti" type="clientiType" />
+				<xs:element name="jocuri" type="jocuriType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

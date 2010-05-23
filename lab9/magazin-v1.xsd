@@ -6,7 +6,7 @@
 				<xs:element name="clienti">
 					<xs:complexType>
 						<xs:sequence>
-						<xs:element name="client">
+						<xs:element name="client" maxOccurs="unbounded">
 							<xs:complexType>
 								<xs:sequence>
 								<xs:element name="idClient" type="xs:positiveInteger"/>
@@ -18,14 +18,14 @@
 								<xs:element name="jocuriAccesate" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-										<xs:element name="idJoc" type="xs:positiveInteger"/>
+										<xs:element name="idJoc" type="xs:positiveInteger"  maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="jocuriCumparate" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-										<xs:element name="idJoc" type="xs:positiveInteger"/>
+										<xs:element name="idJoc" type="xs:positiveInteger" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -39,7 +39,7 @@
 				<xs:element name="jocuri">
 					<xs:complexType>
 						<xs:sequence>
-						<xs:element name="joc">
+						<xs:element name="joc" maxOccurs="unbounded">
 						<xs:complexType>
 							<xs:sequence>
 							<xs:element name="idJoc" type="xs:positiveInteger"/>
