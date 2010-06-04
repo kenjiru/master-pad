@@ -1,6 +1,10 @@
 Am folosit libraria ORBit2 pe Ubuntu 9.10.
 Am instalat orbit2-nameserver.
 
+Trebuie creat fisierul ~/.orbrc care trebuie sa contina:
+ORBIIOPIPv4=1
+ORBLocalOnly=1
+
 Am generat fisierele c/h folosind comanda:
 	orbit-idl-2 --skeleton-impl Calculator.idl
 
